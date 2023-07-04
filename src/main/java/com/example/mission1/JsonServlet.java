@@ -6,6 +6,16 @@ import com.google.gson.JsonParser;
 
 public class JsonServlet {
 
+    private int maxSize = 0;
+
+    public int jsonCheck(){
+        int result = 0;
+
+
+
+        return result;
+    }
+
     public int jsonInsert(String json) {
         JsonParser jsonParser = new JsonParser();
         JsonArray jsonArray = (JsonArray) jsonParser.parseString(json);

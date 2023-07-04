@@ -1,5 +1,6 @@
 package com.example.mission1;
 
+import javax.servlet.annotation.WebServlet;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -7,6 +8,7 @@ import java.net.URLEncoder;
 import java.io.BufferedReader;
 import java.io.IOException;
 
+@WebServlet(name = "apiServlet", value = "/api-servlet")
 public class apiServlet {
     public static void main(String[] args) throws IOException {
         StringBuilder urlBuilder = new StringBuilder("http://openapi.seoul.go.kr:8088"); /*URL*/
