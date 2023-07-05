@@ -1,6 +1,7 @@
-package com.example.mission1;
+package com.example.mission1.servlet;
 
-import java.io.*;
+import com.example.mission1.Property;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -40,8 +41,22 @@ public class WifiServlet extends HttpServlet {
                     " from WIFI;";
             result = stmt.executeQuery(query);
             while(result.next()) {
-                int id = result.getInt("X_SWIFI_MGR_NO");
-                System.out.println("X_SWIFI_MGR_NO = "+id);
+                String X_SWIFI_MGR_NO = result.getString("X_SWIFI_MGR_NO");
+                String X_SWIFI_WRDOFC = result.getString("X_SWIFI_WRDOFC");
+                String X_SWIFI_MAIN_NM = result.getString("X_SWIFI_MAIN_NM");
+                String X_SWIFI_ADRES1 = result.getString("X_SWIFI_ADRES1");
+                String X_SWIFI_ADRES2 = result.getString("X_SWIFI_ADRES2");
+                String X_SWIFI_INSTL_FLOOR = result.getString("X_SWIFI_INSTL_FLOOR");
+                String X_SWIFI_INSTL_TY = result.getString("X_SWIFI_INSTL_TY");
+                String X_SWIFI_INSTL_MBY = result.getString("X_SWIFI_INSTL_MBY");
+                String X_SWIFI_SVC_SE = result.getString("X_SWIFI_SVC_SE");
+                String X_SWIFI_CMCWR = result.getString("X_SWIFI_CMCWR");
+                String X_SWIFI_CNSTC_YEAR = result.getString("X_SWIFI_CNSTC_YEAR");
+                String X_SWIFI_INOUT_DOOR = result.getString("X_SWIFI_INOUT_DOOR");
+                String X_SWIFI_REMARS3 = result.getString("X_SWIFI_REMARS3");
+                int LAT = result.getInt("LAT");
+                int LNT = result.getInt("LNT");
+                int WORK_DTTM = result.getInt("WORK_DTTM");
 
             }
 

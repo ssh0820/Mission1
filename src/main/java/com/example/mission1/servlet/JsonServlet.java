@@ -1,4 +1,4 @@
-package com.example.mission1;
+package com.example.mission1.servlet;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;

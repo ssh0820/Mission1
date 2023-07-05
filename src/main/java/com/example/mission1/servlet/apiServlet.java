@@ -1,4 +1,4 @@
-package com.example.mission1;
+package com.example.mission1.servlet;
 
 import javax.servlet.annotation.WebServlet;
 import java.io.InputStreamReader;
