@@ -1,3 +1,6 @@
+<%@ page import="com.example.mission1.vo.WifiVO" %>
+<%@ page import="com.example.mission1.servlet.WifiServlet" %>
+<%@ page import="java.util.List" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -56,26 +59,31 @@
            <th>작업일자</th>
        </tr>
     </thead>
+    <%
+        List<WifiVO> wifiList = WifiServlet.selectWifiList();
+
+    %>
     <tbody  style="border: slategray">
-        <% for(int i=0; i<10; i++){%>
+        <% for(int i=0; i<wifiList.size(); i++){%>
             <tr>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
+                <td><%=wifiList.get(0)%></td>
+                <td><%=wifiList.get(1)%></td>
+                <td><%=wifiList.get(2)%></td>
+                <td><%=wifiList.get(3)%></td>
+                <td><%=wifiList.get(4)%></td>
+                <td><%=wifiList.get(5)%></td>
+                <td><%=wifiList.get(6)%></td>
+                <td><%=wifiList.get(7)%></td>
+                <td><%=wifiList.get(8)%></td>
+                <td><%=wifiList.get(9)%></td>
+                <td><%=wifiList.get(10)%></td>
+                <td><%=wifiList.get(11)%></td>
+                <td><%=wifiList.get(12)%></td>
+                <td><%=wifiList.get(13)%></td>
+                <td><%=wifiList.get(14)%></td>
+                <td><%=wifiList.get(15)%></td>
+                <td><%=wifiList.get(16)%></td>
+                <td><%=wifiList.get(17)%></td>
             </tr>
         <%}%>
     </tbody>

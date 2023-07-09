@@ -1,11 +1,13 @@
 package com.example.mission1.servlet;
 
 import com.example.mission1.Property;
+import com.example.mission1.vo.WifiVO;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.List;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 
@@ -70,5 +72,11 @@ public class WifiServlet extends HttpServlet {
             }
         }
 
+    }
+
+    public static List<WifiVO> selectWifiList() {
+
+
+        return null;
     }
 }
