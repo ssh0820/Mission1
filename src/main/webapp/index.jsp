@@ -15,7 +15,7 @@
 <a href="mybookMarkList.jsp">즐겨 찾기 보기</a>
 <a href="bookMarkList.jsp">즐겨 찾기 그룹 관리</a>
 
-<table border="1">
+<table border="1" style="width:98%;margin: 10px 10px 10px 10px">
     <colgroup>
         <col style="width: 4%;">
         <col style="width: 4%;">

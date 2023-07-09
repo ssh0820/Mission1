@@ -9,7 +9,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 
 @WebServlet(name = "apiServlet", value = "/api-servlet")
-public class apiServlet {
+public class ApiServlet {
     public static void main(String[] args) throws IOException {
         StringBuilder urlBuilder = new StringBuilder("http://openapi.seoul.go.kr:8088"); /*URL*/
         urlBuilder.append("/" +  URLEncoder.encode("sample","UTF-8") ); /*인증키 (sample사용시에는 호출시 제한됩니다.)*/

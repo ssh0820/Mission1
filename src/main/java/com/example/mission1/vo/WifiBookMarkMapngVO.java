@@ -5,9 +5,10 @@ import lombok.Data;
 import java.time.LocalDateTime;
 
 @Data
-public class BookMarkVO {
+public class WifiBookMarkMapngVO {
     private int no;
-    private String name;
+    private String xSwifiMgrNo;
+    private int bookMarkNo;
     private LocalDateTime rgsDt;
     private LocalDateTime updDt;
 
