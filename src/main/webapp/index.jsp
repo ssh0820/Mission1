@@ -17,7 +17,6 @@
 <a href="api-servlet">Open API 와이파이 정보 가져오기</a>
 <a href="mybookMarkList.jsp">즐겨 찾기 보기</a>
 <a href="bookMarkList.jsp">즐겨 찾기 그룹 관리</a>
-
 <table border="1" style="width:98%;margin: 10px 10px 10px 10px">
     <colgroup>
         <col style="width: 4%;">
@@ -59,33 +58,38 @@
            <th>작업일자</th>
        </tr>
     </thead>
-    <%
-        List<WifiVO> wifiList = WifiServlet.selectWifiList();
-
-    %>
     <tbody  style="border: slategray">
-        <% for(int i=0; i<wifiList.size(); i++){%>
+        <%
+            WifiServlet wifiServlet = new WifiServlet();
+            List<WifiVO> wifiList = wifiServlet.selectWifiList();
+        %>
+        <%if(wifiList.isEmpty()){%>
+        <tr>
+            <td colspan="17" style="text-align: center;min-height: 100px;"><span> 위치 정보를 입력한 후에 조회해 주세요.</span></td>
+        </tr>
+        <%}else{%>
+        <%
+            for(WifiVO wifiVO : wifiList){
+        %>
             <tr>
-                <td><%=wifiList.get(0)%></td>
-                <td><%=wifiList.get(1)%></td>
-                <td><%=wifiList.get(2)%></td>
-                <td><%=wifiList.get(3)%></td>
-                <td><%=wifiList.get(4)%></td>
-                <td><%=wifiList.get(5)%></td>
-                <td><%=wifiList.get(6)%></td>
-                <td><%=wifiList.get(7)%></td>
-                <td><%=wifiList.get(8)%></td>
-                <td><%=wifiList.get(9)%></td>
-                <td><%=wifiList.get(10)%></td>
-                <td><%=wifiList.get(11)%></td>
-                <td><%=wifiList.get(12)%></td>
-                <td><%=wifiList.get(13)%></td>
-                <td><%=wifiList.get(14)%></td>
-                <td><%=wifiList.get(15)%></td>
-                <td><%=wifiList.get(16)%></td>
-                <td><%=wifiList.get(17)%></td>
+                <td><%=wifiVO.getXSwifiMgrNo()%></td>
+                <td><%=wifiVO.getXSwifiWrdofc()%></td>
+                <td><%=wifiVO.getXSwifiMainNm()%></td>
+                <td><%=wifiVO.getXSwifiAdres1()%></td>
+                <td><%=wifiVO.getXSwifiAdres2()%></td>
+                <td><%=wifiVO.getXSwifiInstlFloor()%></td>
+                <td><%=wifiVO.getXSwifiInstlTy()%></td>
+                <td><%=wifiVO.getXSwifiInstlMby()%></td>
+                <td><%=wifiVO.getXSwifiSvcSe()%></td>
+                <td><%=wifiVO.getXSwifiCmcwr()%></td>
+                <td><%=wifiVO.getXSwifiCnstcYear()%></td>
+                <td><%=wifiVO.getXSwifiInoutDoor()%></td>
+                <td><%=wifiVO.getXSwifiRemars3()%></td>
+                <td><%=wifiVO.getLat()%></td>
+                <td><%=wifiVO.getLnt()%></td>
+                <td><%=wifiVO.getWorkDttm()%></td>
             </tr>
-        <%}%>
+        <%}}%>
     </tbody>
 </table>
 <%

@@ -2,7 +2,7 @@ package com.example.mission1.vo;
 
 import lombok.Data;
 
-import java.time.LocalDateTime;
+import java.util.Date;
 
 @Data
 public class WifiVO {
@@ -22,6 +22,6 @@ public class WifiVO {
     private String xSwifiRemars3;
     private Long lat;
     private Long lnt;
-    private LocalDateTime workDttm;
+    private Date workDttm;
 
 }
